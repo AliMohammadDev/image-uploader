@@ -1,0 +1,27 @@
+{
+    "name": "alimohammaddev/image-uploader",
+    "description": "A Laravel-ready image uploader package that supports validation, MIME filtering, and safe unique naming for uploaded files.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ImageUploader\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ImageUploader\\Providers\\ImageUploaderServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "alishadel2001",
+            "email": "alishadel2001@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    }
+}
