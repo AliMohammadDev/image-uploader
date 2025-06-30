@@ -44,12 +44,13 @@ class ImageUploader
 
         $originalFileName = $file->getClientOriginalName();
         $sanitizedFileName = preg_replace('/[^A-Za-z0-9_\-\.]/', '_', $originalFileName);
-        $baseFileName = pathinfo($sanitizedFileName, PATHINFO_FILENAME);
+        $baseFileName = strtolower(pathinfo($sanitizedFileName, PATHINFO_FILENAME));
 
-        if (substr_count($baseFileName, '.') > 0) {
+        if (strpos($baseFileName, '.') !== false) {
             throw new \InvalidArgumentException('Invalid base filename.');
         }
 
+        
         $sanitizedFileName = basename($sanitizedFileName);
 
         $uniqueId = Str::uuid();
