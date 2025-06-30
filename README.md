@@ -13,7 +13,7 @@ composer require alimohammaddev/image-uploader
 
 ## Usage
 
-### Upload a new image
+## Upload a new image
 
 ```php
 use ImageUploader\Facades\ImageUploader;
@@ -23,7 +23,7 @@ Route::post('/upload', function () {
     return response()->json(['path' => $path]);
 });
 
-### Upate a new image
+## Upate a new image
 
 ```php
 use ImageUploader\Facades\ImageUploader;
