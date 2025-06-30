@@ -15,7 +15,6 @@ composer require alimohammaddev/image-uploader
 
 ## Upload a new image
 
-```php
 use ImageUploader\Facades\ImageUploader;
 
 Route::post('/upload', function () {
@@ -25,7 +24,6 @@ Route::post('/upload', function () {
 
 ## Upate a new image
 
-```php
 use ImageUploader\Facades\ImageUploader;
 
 Route::post('/update', function () {
