@@ -29,7 +29,7 @@ Route::post('/upload', function () {
 use ImageUploader\Facades\ImageUploader;
 
 Route::post('/update', function () {
-    $oldPath = 'old-image'; 
+    $oldPath = 'images/old-image-name.png'; 
     $newPath = ImageUploader::update(request()->file('image'),$oldPath);
     return response()->json(['path' => $newPath]);
 });
